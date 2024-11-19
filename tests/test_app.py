@@ -47,13 +47,3 @@ def test_similar_words(payload, expected_status):
         assert "similar_words" in data
         assert data["similar_words"]  # List of similar words should not be empty
 
-# Mocking example (optional, if external APIs are used)
-# Uncomment and use pytest-mock or unittest.mock for mocking external API calls
-# def test_mocked_translation(mocker):
-#     mock_response = {"translated_text": "Hola, ¿cómo estás?"}
-#     mocker.patch("src.external_service.translate", return_value=mock_response)
-#     payload = {"language": "Spanish", "text": "Hello, how are you?"}
-#     response = client.post("/translate/", json=payload)
-#     assert response.status_code == 200
-#     data = response.json()
-#     assert data == mock_response
