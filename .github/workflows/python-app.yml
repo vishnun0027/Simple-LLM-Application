@@ -58,7 +58,7 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          IMAGE_NAME=${{ github.repository_owner }}/Simple-LLM-App
+          IMAGE_NAME=${{ github.repository_owner }}/simple-llm-app
           docker build -t $IMAGE_NAME:${{ github.sha }} .
           docker push $IMAGE_NAME:${{ github.sha }}
           docker tag $IMAGE_NAME:${{ github.sha }} $IMAGE_NAME:latest
